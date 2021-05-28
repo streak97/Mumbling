@@ -4,7 +4,7 @@ object Mumbling extends App {
         var arrInput: Array[String] = lowercaseInput.sliding(1).toArray
 
         for (i <- arrInput.indices) yield {
-            arrInput(i) = arrInput(i) * (i + 1)
+            arrInput(i) *= (i + 1)
             arrInput(i) = arrInput(i).capitalize
         }
 
