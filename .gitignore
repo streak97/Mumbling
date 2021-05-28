@@ -75,4 +75,5 @@ fabric.properties
 *.iml
 out
 gen
+.bsp
 
