@@ -1,5 +1,13 @@
 object Mumbling extends App {
     def accum(input: String): String = {
-        return input
+        val lowercaseInput = input.toLowerCase()
+        var arrInput: Array[String] = lowercaseInput.sliding(1).toArray
+
+        for (i <- arrInput.indices) yield {
+            arrInput(i) = arrInput(i) * (i + 1)
+            arrInput(i) = arrInput(i).capitalize
+        }
+
+        arrInput.mkString("-")
     }
 }
